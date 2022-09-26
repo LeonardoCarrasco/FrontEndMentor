@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <div class="container-back">
+      <div class="background-gradient">
+
+        <div class="card-container">
+          <div class="card front">
+            <img src="images/bg-card-front.png" alt="">
+            <div class="content-card">
+              <div class="profile">
+                <div class="circle"></div>
+                <div class="circle2"></div>
+              </div>
+              
+              <div class="bottom">
+
+                <div class="card-number">
+                  <span>0000</span> <span>0000</span> <span>0000</span> <span>0000</span>
+                </div>
+  
+                <div class="container-name-date">
+  
+                  <div class="cardholder-name">
+                    <h2>Lionel Messi</h2>
+                  </div>
+  
+                  <div class="exp-date">
+                    <h2> <span id="MM">00</span>/<span id="YY">00</span> </h2>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="card back">
+            <img src="images/bg-card-back.png" alt="">
+            <div class="content-card">
+                <div class="cvc-container">
+                  <h2>123</h2>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container-form">
+
+          <div class="success" style="display:none">
+
+            <div class="container-success">
+
+              <div class="logo">
+                <img src="images/icon-complete.svg" alt="">
+              </div>
+              
+              <h1>THANKS YOU!</h1>
+
+              <h3>We`ve added your card details</h3>
+
+              <button class="btn">Continue</button>
+              
+
+            </div>
+          </div>
+
+          <div class="form">
+            <form action="">
+
+              <div class="content">
+                <label for="cardholder-name">cardholder name</label>
+                <div class="inputs-text-container">
+
+                  <div class="inputs-text">
+                    <input type="text" id="cardholder-name" name="cardholder-name" placeholder="e.g. leo messi" maxlength="14">
+                    <!-- <span class="cant-be-blank">Can`t be blank</span> -->
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="content">
+                <label for="card-number">card number</label>
+                <div class="inputs-text-container">
+
+                  <div class="inputs-text">
+                    <input type="number" id="card-number" name="card-number" placeholder="e.g. 3004040400" maxlength="16" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                  </div>
+
+                </div>
+                
+              </div>
+
+              <div class="content inline">
+                <div class="item one">
+                  <label for="exp.date">exp.date (mm/yy)</label>
+
+                  <div class="inputs-text-container gap">
+                    <div class="inputs-text">
+                      <input type="number" id="month" name="month" placeholder="MM" maxlength="2" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                    <div class="inputs-text">
+                      <input type="number" maxlength="2" id="year" name="year" placeholder="YY" maxlength="2" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                  </div>
+
+                    
+                </div>
+
+                <div class="item">
+                  <label for="cvc">cvc</label>
+
+                  <div class="inputs-text-container">
+
+                    <div class="inputs-text">
+
+                      <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" maxlength="3" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button type="button" class="btn" id="btn-form">Confirm</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
