@@ -1,3 +1,3 @@
-# FrontEndMentor
+# FrontEndMentor(https://leonardocarrasco.github.io/FrontEndMentor/)
 
-[intereactive-card-detail-form](ntereactive-card-detail-form/index.html)
+[intereactive-card-detail-form](intereactive-card-detail-form/index.html)
