@@ -53,6 +53,8 @@ column_link[1].addEventListener('mouseleave',()=>{
 
 const bar_menu = document.querySelector('.icon-bar');
 
+const capa = document.querySelector('.capa');
+
 const link_container = document.querySelector('.container-logo-links');
 const logs = document.querySelector('.logs');
 
@@ -62,10 +64,11 @@ bar_menu.addEventListener('click', ()=>{
 
     if (link_container.classList.contains('menu-open')) {
         bar_menu.children[0].src = 'images/icon-close-menu.svg';
-        document.body.style.background = "rgba(0,0,0,0.8)";
+        capa.classList.add('bckgr-color');
+
     }else{
         bar_menu.children[0].src = 'images/icon-menu.svg';
-        document.body.style.backgroundColor = "unset";
+        capa.classList.remove('bckgr-color');
     }
 
     
