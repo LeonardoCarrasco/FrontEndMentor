@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+:root{
+    --primary-Light-Cyan: hsl(193, 38%, 86%);
+    --primary-Neon-Green: hsl(150, 100%, 66%);
+
+    --neutral-Grayish-Blue: hsl(217, 19%, 38%);
+    --neutral-Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --neutral-Dark-Blue: hsl(218, 23%, 16%);
+
+    --font-family: 'Manrope', sans-serif;
+    --weigth: 800;
+    --font-size-quotes: 28px;
+}
+
+body{
+    background-color: var(--neutral-Dark-Blue);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    margin: 0 15px;
+}
+
+.container-advice-generator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: var(--neutral-Dark-Grayish-Blue);
+    padding: 50px;
+    border-radius: 14px;
+    position: relative;
+    box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.05);
+    transition: all 200ms;
+    max-width: 700px;
+}
+
+.advice-id{
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--primary-Neon-Green);
+    letter-spacing: 3px;
+}
+
+.advice-text-container{
+    font-size: 1.2em;
+    font-weight: var(--weigth);
+    padding: 25px 0;
+    text-align: center;
+    color: var(--primary-Light-Cyan);
+}
+
+.pattern-divider{
+    padding: 20px 0;
+}
+
+#pattern-mb{
+    display: none;
+}
+
+.dice-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: var(--primary-Neon-Green);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.dice-icon:hover{
+    box-shadow: 0px 0px 72px 1px hsla(150, 100%, 66%, 0.763);
+}
+
+
+@media  screen and (max-width:450px) {
+
+    #pattern-mb{
+        display: block;
+    }
+
+    #patter-dskt{
+        display: none;
+    }
+
+    .advice-text-container{
+        font-size: 15px;
+    }
+
+    .advice-id{
+        font-size: 12px;
+    }
+    
+}
+
