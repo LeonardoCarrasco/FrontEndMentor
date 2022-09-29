@@ -34,7 +34,8 @@ main{
     max-width: 1440px;
     height: 100vh;
     display: flex;
-    margin: 0 15px;
+    margin: auto;
+    padding: 0 15px;
 }
 
 .container-advice-generator{
