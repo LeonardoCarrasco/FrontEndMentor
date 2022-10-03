@@ -1,0 +1,280 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-color: var(--background-color);
+    color: #fff;
+}
+
+:root{
+    --background-color: hsl(226, 43%, 10%);
+    --profile-background-color: hsl(246, 80%, 60%);
+    --card-bckgr-color: hsl(235, 46%, 20%);
+    --card-text-color: hsl(236, 100%, 87%);
+    --card-hover: hsl(235, 45%, 61%);
+
+    --card-work: hsl(15, 100%, 70%);
+    --card-play: hsl(195, 74%, 62%);
+    --card-study: hsl(348, 100%, 68%);
+    --card-exercise:hsl(145, 58%, 55%);
+    --card-social: hsl(264, 64%, 52%);
+    --card-self-care: hsl(43, 84%, 65%);
+    --card-title-font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    max-width: 1440px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    display: flex;
+    margin: auto;
+}
+
+.profile-and-time-frames{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    flex-basis: 30%;
+}
+
+.profile{
+    background: var(--profile-background-color);
+}
+
+.profile-picture img{
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.profile-picture {
+    width: 80px;
+    margin-bottom: 50px;
+}
+
+.report-for{
+    max-width: 200px;
+    margin-bottom: 50px;
+    margin-right: 40px;
+}
+
+.report-for h3{
+    font-size: 1rem;
+    color: var(--card-text-color);
+    font-weight: 500;
+    line-height: 2;
+}
+
+.report-for h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+.time-frames a{
+    display: block;
+    line-height: 2.5;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(236deg 18% 54%);
+}
+
+.time-frames a:hover{
+    color: #fff;
+}
+
+.profile-and-time-frames, .profile{
+    border-radius: 13px;
+}
+
+.profile, .time-frames{
+    padding: 30px;
+}
+
+
+.profile-and-time-frames, .card-stats{
+    background: var(--card-bckgr-color);
+}
+
+
+.activities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+#work{
+    background: var(--card-work);
+}
+
+#play{
+    background: var(--card-play);
+}
+
+#study{
+    background: var(--card-study);
+}
+
+#social{
+    background: var(--card-social);
+}
+
+#exercise{
+    background: var(--card-exercise);
+}
+
+#self-care{
+    background: var(--card-self-care);
+}
+
+.card-main{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 15px 15px;
+    flex-grow: 1;
+    flex-basis: 30%;
+}
+
+.card-stats:hover{
+    background-color: hsl(237, 44%, 31%);
+}
+
+.card-stats{
+    padding: 35px;
+    border-radius: 12px;
+    flex-grow: 1;
+}
+
+.icon-img {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 5em;
+    height: 55px;
+    margin: 0 10px;
+}
+
+#work .icon-img{
+    background-image: url(images/icon-work.svg);
+}
+
+#play .icon-img{
+    background-image: url(images/icon-play.svg);
+}
+
+#study .icon-img{
+    background-image: url(images/icon-study.svg);
+}
+
+#exercise .icon-img{
+    background-image: url(images/icon-exercise.svg);
+}
+
+#self-care .icon-img{
+    background-image: url(images/icon-self-care.svg);
+}
+
+#social .icon-img{
+    background-image: url(images/icon-social.svg);
+}
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--card-title-font-size);
+    margin-bottom: 10px;
+}
+
+.current-stat{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.previuos-stat{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--card-text-color);
+}
+
+#icon-ellipsis{
+    vertical-align: middle;
+}
+
+.active{
+    color: #fff !important;
+}
+
+
+@media screen and (max-width:700px) {
+    
+    main{
+        margin: 20px;
+        height: auto;
+    }
+
+    .dashboard{
+        flex-direction: column;
+    }
+
+    .profile-and-time-frames {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-picture {
+        margin-bottom: 0;
+    }
+
+    .report-for {
+        max-width: unset;
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .time-frames {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .activities{
+        flex-direction: column;
+    }
+
+    .stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
