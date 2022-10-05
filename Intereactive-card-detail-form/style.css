@@ -212,15 +212,13 @@ input:focus{
 
 .inputs-text-container{
     display: flex;
-    align-items: center;
 }
+
 .gap{
     gap: 10px;
 }
 
 .inputs-text{
-    display: flex;
-    flex-direction: column;
 }
 
 .cant-be-blank{
